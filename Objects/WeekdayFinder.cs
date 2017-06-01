@@ -1,7 +1,15 @@
-public string GetDay()
-    {
-      System.DateTime dt = new DateTime(2017, 5, 31);
-      string day = dt.ToString("dddd");
-      Console.WriteLine(day);
-      return day;
-    }
+using System;
+
+namespace WeekdayFinderProject.Objects
+{
+  public class WeekdayFinder
+  {
+    public string GetDay(int year, int month, int day)
+      {
+        DateTime dt = new DateTime(year, month, day);
+        string dayOfWeek = dt.ToString("dddd");
+        Console.WriteLine(dayOfWeek);
+        return dayOfWeek;
+      }
+  }
+}
